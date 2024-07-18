@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.game-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(src/assets/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px;
+  
+}
+.game-container {
+  position: relative;
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 280px);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  display: flex;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.game-container .game-content {
+  transform: translateX(-100px);
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  padding-left: 110px;
+  border-radius: 20px;
+}
+.game-container .game-content h2 {
+  font-size: 3em;
+  color: #8a2435;
+}
+.game-container .game-content p {
+  font-size: 1.2em;
+  color: #8a2435;
+}
+
+.game-container .game-content .play-button-game {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  text-decoration: none;
+  padding: 10px;
+  background: #fff;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.game-container .game-imgBx img {
+  max-width: 400px;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+}
+.game-sci {
+  position: absolute;
+  right: -25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.game-sci li {
+  list-style: none;
+  transition: 0.5s;
+}
+.game-sci li a {
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.game-sci li a img {
+  transform: scale(0.6);
+  transition: 0.5s;
+}
+.game-sci li:hover a img {
+  transform: scale(0.6) rotate(360deg);
+}
+
+
+game-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #1f061a; */
+}
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.game-box {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
+}
+.game-box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+.game-box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  filter: blur(30px);
+  transition: 0.5s;
+}
+.game-box:nth-child(3):before,
+.game-box:nth-child(3):after {
+  transform: skewX(-15deg);
+}
+.game-box:hover:before,
+.game-box:hover:after {
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+}
+.game-box:nth-child(1):before,
+.game-box:nth-child(1):after {
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+.game-box:nth-child(2):before,
+.game-box:nth-child(2):after {
+  background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+.game-box:nth-child(3):before,
+.game-box:nth-child(3):after {
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+.game-box span {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 50;
+  pointer-events: none;
+}
+.game-box span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s linear infinite;
+}
+.game-box:hover span:before {
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+.game-box span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s linear infinite;
+  animation-delay: -1s;
+}
+.game-box:hover span:after {
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.game-box .game-content {
+  position: relative;
+  left: 0;
+  z-index: 1;
+  padding: 20px 40px;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.game-box:hover .game-content {
+  left: -25px;
+  padding: 60px 40px;
+}
+/* .boxgame- .content h2
+{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+} */
+/* .box .content p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+} */
+/* .game-box .game-content a {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  text-decoration: none;
+  padding: 10px;
+  background: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: 0.5s;
+} */
+

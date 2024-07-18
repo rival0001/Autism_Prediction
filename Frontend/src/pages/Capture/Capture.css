@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.photo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(src/assets/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px;
+}
+.photo-container {
+  position: relative;
+  width: calc(100% - 100px);
+   min-height: calc(100vh - 280px);
+  margin-top: -6rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  display: flex;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.webcam {
+    position: ;
+    width: 40%;
+    height: auto;
+    
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.);
+    margin-left: 10px; 
+
+   
+    
+
+    
+}
+
+.photo-container p {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  
+}
+  
+  .photo-container .photo-submit{
+    display: inline-block;
+    padding: 15px 30px;
+    background: #fff;
+    color: #8a2435;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 100px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: absolute;
+    left: 62%;
+    
+  }
+  .photo-container .photo-reset {
+    
+    display: inline-block;
+    padding: 15px 30px;
+    background: #fff;
+    color: #8a2435;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+    border: 100px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: absolute;
+    left: 66%;
+    bottom: 120px;
+    
+  }
+
+  .photo-container .photo-output{
+    display: inline-block;
+    padding: 15px 30px;
+    background: #fff;
+    color: #8a2435;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 100px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: absolute;
+    left: 63%;
+    
+    
+  }
